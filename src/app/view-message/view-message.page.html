@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="getBackButtonText()" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="message">
+  <ion-item>
+    <ion-icon aria-hidden="true" name="person-circle" color="primary"></ion-icon>
+    <ion-label class="ion-text-wrap">
+      <h2>
+        {{ message.fromName }}
+        <span class="date">
+          <ion-note>{{ message.date }}</ion-note>
+        </span>
+      </h2>
+      <h3>To: <ion-note>Me</ion-note></h3>
+    </ion-label>
+  </ion-item>
+  
+  <div class="ion-padding">
+    <h1>{{ message.subject }}</h1>
+    <p>
+      Садко — молодой гусляр из Великого Новгорода. В начале рассказа он беден, горд и самолюбив. Его единственное достояние — яровчатые гусли, на которых он играет, переходя с одного весёлого застолья к другому.
+
+Однако наступает день, а за ним другой, третий, когда Садко не зовут на честной пир. Гордость богатыря задета, но он никому не показывает обиды. Он в одиночестве идёт к Ильмень-озеру, садится на бел-горюч камень на берегу и достаёт заветные гусли. Садко играет, отводя в музыке душу. От его игры вода в озере «всколыхалася». Не обратив внимание на это, Садко возвращается назад в город.
+    </p>
+  </div>
+</ion-content>
